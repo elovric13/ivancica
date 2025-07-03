@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usluge - Ivančica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main2.css" />
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="index.html">
+                <img src="logo_name.svg" alt="Ivančica logo" class="logo" />
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Naslovnica</a>
+            <a href="usluge.html">Usluge</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        
+    </header>
+
+    <div class="background-decor">
+    <!-- Left side daisies -->
+        <div class="daisy daisy-l1"></div>
+        <div class="daisy daisy-l2"></div>
+        <div class="daisy daisy-l3"></div>
+        <div class="daisy daisy-l4"></div>
+        <!-- Right side daisies -->
+        <div class="daisy daisy-r1"></div>
+        <div class="daisy daisy-r2"></div>
+
+
+        
+
+    </div>
+
+
+    <main class="kontakt-layout">
+    <div class="kontakt-form">
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="Location.png" alt="Location" class="contact-icon" />
+                <span>Primorsko-goranska županija</span>
+            </div>
+            <div class="contact-item">
+                <img src="Email.png" alt="Email" class="contact-icon" />
+                <span>info@ivancica.hr</span>
+            </div>
+            <div class="contact-item">
+                <img src="Phone.png" alt="Phone" class="contact-icon" />
+                <span>+385 99 123 4567</span>
+        </div>
+        </div>
+
+      <h2>Imate pitanje? Pišite nam!</h2>
+      <form>
+        <div class="input-group">
+          <img src="User.png" alt="Ime" class="input-icon"/>
+          <input type="text" placeholder="Ime" required />
+        </div>
+
+        <div class="input-group">
+          <img src="Email.png" alt="Email" class="input-icon"/>
+          <input type="email" placeholder="email@example.com" required />
+        </div>
+
+        <div class="input-group">
+          <textarea placeholder="Vaša Poruka." required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button-kontakt">Pošalji →</button>
+      </form>
+
+    </div>
+    
+
+    <div class="image-block">
+        <div class="cleaning_lady">
+            <img src="image2.png" alt="Čistačica ilustracija">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    </main>
+
+
+
+
+<script>
+    const services = {
+    apartman: {
+      icon: "Bed.png",
+      title: "Čišćenje apartmana",
+      text: `Redovno održavanje turističkih apartmana<br />
+             Priprema za dolazak gostiju<br />
+             Završno čišćenje nakon odlaska`
+    },
+    stanovi: {
+      icon: "Home.png",
+      title: "Čišćenje stanova i kuća",
+      text: ` Povremena ili redovita čišćenja`
+    },
+    uredi: {
+      icon: "Company.png",
+      title: "Čišćenje poslovnih prostora",
+      text: `Održavanje ureda, trgovina, salona<br />
+             Rasporedi po dogovoru (dnevno, tjedno, mjesečno)`
+    },
+    dubinsko: {
+      icon: "Sponge.png",
+      title: "Dubinsko čišćenje",
+      text: `Namještaj (sofe, madraci, stolice)<br />
+             Tepisi i prostirke<br />
+             Usisavanje i čišćenje parom`
+    },
+    generalno: {
+      icon: "Housekeeping.png",
+      title: "Generalno čišćenje",
+      text: `Nakon renovacija i građevinskih radova<br />
+             Dubinsko sezonsko čišćenje cijelog prostora<br />
+             Uklanjanje tvrdokornih nečistoća`
+    },
+    stubišta: {
+      icon: "Staircase.png",
+      title: "Održavanje stubišta i zajedničkih prostorija",
+      text: `Za stambene zgrade i poslovne objekte<br />
+             Mogućnost ugovornog održavanja`
+    }
+  };
+
+  function setFeatured(key) {
+  const featured = document.getElementById("featured");
+  const data = services[key];
+
+  featured.classList.add("fade-out");
+
+  setTimeout(() => {
+    document.getElementById("featured-icon").src = data.icon;
+    document.getElementById("featured-title").innerHTML = `<strong>${data.title}</strong>`;
+    document.getElementById("featured-text").innerHTML = data.text;
+
+    featured.classList.remove("fade-out");
+    featured.classList.add("fade-in");
+
+    // Remove fade-in class after animation completes
+    setTimeout(() => {
+      featured.classList.remove("fade-in");
+    }, 300);
+  }, 200);
+}
+
+</script>
+    
+</body>
+</html>

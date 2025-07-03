@@ -1,0 +1,575 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFEE9;
+  font-family: Inter;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background */
+
+.background-decor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Daisy flower decorations */
+.daisy {
+    position: absolute;
+    background-image: url('../daisy.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.daisy-l1 {
+    left: -106px;
+    top: 170px;
+    width: 217px;
+    height: 209px;
+    opacity: 0.4;
+}
+
+.daisy-l2 {
+    left: 5px;
+    top: 412px;
+    width: 120px;
+    height: 125px;
+    opacity: 0.7;
+}
+
+.daisy-l3 {
+    left: -89px;
+    top: 743px;
+    width: 184px;
+    height: 142px;
+    opacity: 0.7;
+}
+
+.daisy-l4 {
+    left: 125px;
+    top: 865px;
+    width: 147px;
+    height: 133px;
+    opacity: 0.7;
+}
+
+.daisy-r1 {
+    right: 10px;
+    top: 117px;
+    width: 116px;
+    height: 105px;
+    opacity: 0.6;
+}
+
+.daisy-r2 {
+    right: -150px;
+    top: 745px;
+    width: 272px;
+    height: 219px;
+    opacity: 0.55;
+}
+
+/* Header */
+
+header {
+    display:  flex;
+    justify-content: space-between;
+    background-color: transparent;
+    /* width: 100%; 
+    PITATI CHAT GPT ZA ŠTO JE TO*/
+}
+
+.header-left {
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding: 20px 50px;
+}
+
+.main-nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #000F3C;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main-nav a:hover {
+  /* transform: translateY(-2px); */
+  color: #17a3b6;
+}
+
+
+/* Naslovnica */
+
+.naslovnica-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px;
+  flex-wrap: wrap;
+  gap: 50px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 80px;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto; */
+}
+
+.text-block {
+  max-width: 700px;
+  flex-shrink: 1;
+  /* flex: 1; */
+  margin-left: 75px;
+}
+
+.text-block h1 {
+  font-size: 65px;
+  font-weight: bold;
+  color: #000F3C;
+}
+
+.subhead {
+  font-size: 40px;
+  color: #000F3C;
+}
+
+.cta-button-naslovnica {
+  display: block;
+  width: 350px;
+  background: #51D1E4;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+  padding: 12px 28px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cta-button-naslovnica:hover {
+  background-color: #1fbfd3;
+}
+
+.location {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000F3C;
+}
+
+
+.cleaning_lady {
+  position: relative;
+  height: 100%;
+  width: auto;
+}
+
+.cleaning_lady img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -65%);
+  background: #FFF4CA;
+  width: 450px;
+  height: 450px;
+  z-index: -1;
+  opacity: 75%;
+}
+
+/* Services */
+
+.wave {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  z-index: -1;
+}
+
+.services-page {
+  padding: 50px 0px;
+}
+
+.services-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+  gap: 150px;
+  flex-wrap: wrap;
+  /* margin-bottom: 40px; */
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  color: #000F3C;
+  max-width: 550px;
+  font-weight: bold;
+
+}
+
+/* Usluge - Featured service */
+
+.featured-service {
+  /* display: flex; */
+  /* height: 170px; */
+  /* gap: 50px; */
+  padding: 0px 40px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+
+  /* .featured-service img {
+    width: 65px;
+    height: 65px;
+  } */
+
+  .featured-service h3 {
+    color: #000F3C;
+    font-size: 32px;
+  }
+
+  .featured-service p {
+    font-size: 26px;
+    color: #000;
+  }
+}
+
+
+/* Usluge cards */
+
+.services-cards {
+  column-count: 2;
+  column-gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.service-card {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  break-inside: avoid; /* Prevent splitting across columns */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center; 
+    gap: 40px; 
+    margin-bottom: 20px;
+}
+
+.service-card img {
+    width: 60px;
+    flex-shrink: 0;
+    /* padding-left: 25px; */
+    margin-left: 30px;
+}
+
+.service-card h3 {
+    flex: 1;
+    font-size: 26px;
+    color: #1F3A5F;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.service-card p {
+    font-size: 18px;
+    color: #000F3C;
+    margin-left: 30px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+    .services-layout {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    .image-block {
+      display: none;
+    }
+
+    .service-cards {
+      justify-content: center;
+    }
+
+    .service-tile {
+      width: 100%;
+    }
+
+    .services-wrapper {
+      padding: 0;
+    }
+}
+
+/* Kontakt */
+
+.kontakt-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  gap: 400px;
+  flex-wrap: wrap;
+
+  .kontakt-form {
+    border-radius: 5px;
+    padding: 30px;
+    width: 490px;
+  }
+
+  .kontakt-form h2 {
+    font-size: 36px;
+    color: #000F3C;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    width: 100%;
+    height: 70xp;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .input-group input,
+  .input-group textarea {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 15px;
+    font-family: 'Inter';
+    resize: none;
+    background: transparent;
+  }
+
+  .input-group textarea {
+    height: 123px;
+  }
+
+  .input-icon {
+    width: 30px;
+    margin-right: 15px;
+  }
+
+  .cta-button-kontakt {
+    width: 150px;
+    background-color: #51D1E4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .cta-button-kontakt:hover {
+    background-color: #1fbfd3;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kontakt-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kontakt-form {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Services */
+
+/* .services-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+.services-wrapper {
+  max-width: 890px;
+  /* margin: 0 100px; */
+  padding: 40px;
+}
+
+/* Usluge - Featured service */
+
+/* .featured-service {
+  /* display: flex; */
+  /* height: 170px; */
+  /* gap: 50px; */
+  /* padding: 0px 40px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  align-items: center; */
+ 
+  /* .featured-service img {
+    width: 65px;
+    height: 65px;
+  } */
+
+  /* .featured-service h3 {
+    color: #000F3C;
+    font-size: 32px;
+  }
+
+  .featured-service p {
+    font-size: 26px;
+    color: #000;
+  }
+} */ */
+
+
+/* Usluge cards
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.service-cards a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-tile {
+  height: 200px;
+  min-width: 230px;
+  max-width: 240px;
+  background-color: #aee1c9d2;
+  border-radius: 30px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000F3C;
+  transition: transform 0.2s;
+}
+
+.service-tile:hover {
+  transform: translateY(-5px);
+}
+
+.service-tile img {
+  width: 65px;
+  margin-top: 10px;
+}
+
+.featured-service {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.featured-service.fade-out {
+  opacity: 0;
+}
+
+.featured-service.fade-in {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+    .services-layout {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    .image-block {
+      display: none;
+    }
+
+    .service-cards {
+      justify-content: center;
+    }
+
+    .service-tile {
+      width: 100%;
+    }
+
+    .services-wrapper {
+      padding: 0;
+    }
+} */
