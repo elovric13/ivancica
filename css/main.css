@@ -112,8 +112,6 @@ header {
     display:  flex;
     justify-content: space-between;
     background-color: transparent;
-    /* width: 100%; 
-    PITATI CHAT GPT ZA ŠTO JE TO*/
 }
 
 .header-left {
@@ -137,7 +135,7 @@ header {
   text-decoration: none;
   color: #000F3C;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .main-nav a:hover {
@@ -164,24 +162,24 @@ header {
 }
 
 .text-block h1 {
-  font-size: 24px;
+  font-size: 26px;
   color: #000F3C;
 }
 
 .subhead {
-  font-size: 20px;
+  font-size: 18px;
   color: #000F3C;
   text-align: justify;
 }
 
 .cta-button-naslovnica {
   display: block;
-  width: 320px;
+  width: 300px;
   background: #51D1E4;
   color: white;
   text-align: center;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 22px;
   padding: 12px 28px;
   border-radius: 15px;
   text-decoration: none;
@@ -190,12 +188,6 @@ header {
 
 .cta-button-naslovnica:hover {
   background-color: #1fbfd3;
-}
-
-.location {
-  font-size: 22px;
-  font-weight: bold;
-  color: #000F3C;
 }
 
 
