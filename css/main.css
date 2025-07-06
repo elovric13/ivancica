@@ -248,28 +248,35 @@ header {
   height: 110px;
 }
 
-.services-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  opacity: 0.4; 
-  z-index: -1; /* Keep behind the content */
-  pointer-events: none;
-}
-
 .headline h1{
   text-align: center;  
   color: #000F3C;
-  font-size: 34px;
+  font-size: 32px;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 16px;
+}
+
+.section-divider img {
+  width: 35px;
+  opacity: 0.8;
+}
+
+.section-divider .line {
+  flex: 1;
+  height: 1px;
+  background-color: #E3D6A6; 
+  opacity: 0.7;
+  max-width: 100px;
 }
 
 
-
 /* Usluge cards */
-
 
 .featured-service-card {
   background-color: #fff;
@@ -321,7 +328,7 @@ header {
   background: #fff;
   border-radius: 15px;
   padding: 20px;
-  height: 120px;
+  height: 100px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease;
