@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main2.css" />
 </head>
 <body>
 
@@ -47,69 +47,58 @@
     </div>
 
     <div class="services-cards-container">
+
+      <div id="featured-service" class="featured-service-card">
+        <div id="featured" class="featured-inner">
+          <div class="featured-header">
+            <img id="featured-icon" src="" alt="">
+            <h2 id="featured-title"></h2>
+          </div>
+          <p id="featured-text"></p>
+        </div>
+      </div>
+
     <section class="services-cards">
-      <!-- <svg class="wave" viewBox="0 0 1440 1200">
-            <path fill="#E0F1F9" d="M0,128L80,144C160,160,320,192,480,186.7C640,181,800,139,960,144C1120,149,1280,203,1360,229.3L1440,256L1440,1000L0,1000Z"></path>
-        </svg> -->
-      <div class="service-card">
+      <div class="service-card" data-key="stanovi">
         <div class="service-header">
-            <img src="Home.png" alt="Čišćenje stanova i kuća">
+            <img src="pictures/Home.png" alt="Čišćenje stanova i kuća">
             <h3>Čišćenje stanova i kuća</h3>
         </div>
-        <p>Povremena ili redovita čišćenja</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-key="dubinsko">
         <div class="service-header">
-            <img src="Living Room.png" alt="Dubinsko čišćenje">
+            <img src="pictures/Living Room.png" alt="Dubinsko čišćenje">
             <h3>Dubinsko čišćenje</h3>
         </div>
-        <p>
-            Namještaj (sofe, madraci, stolice)<br />
-            Tepisi i prostirke<br />
-            Usisavanje i čišćenje parom</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-key="apartmani">
         <div class="service-header">
-            <img src="Bed.png" alt="Čišćenje apartmana">
+            <img src="pictures/Bed.png" alt="Čišćenje apartmana">
             <h3>Čišćenje apartmana</h3>
         </div>
-        <p>
-            Redovno održavanje turističkih apartmana<br />
-            Priprema za dolazak gostiju<br />
-            Završno čišćenje nakon odlaska</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-key="generalno">
         <div class="service-header">
-            <img src="Housekeeping.png" alt="Generalno čišćenje">
+            <img src="pictures/Housekeeping.png" alt="Generalno čišćenje">
             <h3>Generalno čišćenje</h3>
         </div>
-        <p>
-            Nakon renovacija i građevinskih radova<br />
-            Dubinsko sezonsko čišćenje cijelog prostora<br />
-            Uklanjanje tvrdokornih nečistoća</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-key="uredi">
         <div class="service-header">
-            <img src="Company.png" alt="Čišćenje poslovnih prostora">
+            <img src="pictures/Company.png" alt="Čišćenje poslovnih prostora">
             <h3>Čišćenje poslovnih prostora</h3>
         </div>
-        <p>
-            Održavanje ureda, trgovina, salona<br />
-            Rasporedi po dogovoru (dnevno, tjedno, mjesečno)</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-key="stubišta">
         <div class="service-header">
-            <img src="Staircase.png" alt="Stubišta i zajedničke prostorije">
+            <img src="pictures/Staircase.png" alt="Stubišta i zajedničke prostorije">
             <h3>Održavanje stubišta i zajedničkih prostorija</h3>
         </div>
-        <p>
-            Za stambene zgrade i poslovne objekte<br />
-            Mogućnost ugovornog održavanja</p>
       </div>
     </section>
     </div>
@@ -117,5 +106,97 @@
   </main>
     
 
+</body>
+</html>
+
+
+
+
+<script>
+    const services = {
+    apartmani: {
+      icon: "pictures/Bed.png",
+      title: "Čišćenje apartmana",
+      text:  `Čist i uredan apartman ostavlja dobar prvi dojam i povećava šanse da vam se gosti vrate.<br />
+               Nakon svake smjene temeljito očistimo apartman i pripremimo ga za dolazak novih gostiju - brzo, pedantno i bez stresa.<br />
+               Koristimo profesionalna sredstva i opremu, a pazimo na svaki detalj.<br />
+               Po želji, nudimo i dodatne usluge poput postavljanja posteljine i ručnika.<br />
+               Fleksibilni smo s terminima i brojem apartmana - prilagođavamo se vašem rasporedu.`
+    },
+    stanovi: {
+      icon: "pictures/Home.png",
+      title: "Čišćenje stanova i kuća",
+      text: `Za sve koji žele čist dom bez gubljenja vremena.<br />
+            Nudimo tjedno, dvotjedno ili mjesečno održavanje stanova i kuća, prilagođeno vašim navikama i prostoru.<br />
+            Radimo temeljito, pouzdano i diskretno – kao da čistimo vlastiti dom.`
+    },
+    uredi: {
+      icon: "pictures/Company.png",
+      title: "Čišćenje poslovnih prostora",
+      text: `Uredan radni prostor ostavlja dobar dojam i podiže atmosferu.<br />
+            Čistimo urede, salone, ordinacije i druge poslovne prostore - prije ili nakon radnog vremena, ovisno o vašim potrebama.<br />
+            Brzi smo, tihi i točni, kako bi vi mogli raditi neometano.`
+    },
+    dubinsko: {
+      icon: "pictures/Living Room.png",
+      title: "Dubinsko čišćenje",
+      text: `Za one koji žele više od običnog čišćenja.<br />
+            Dubinski čistimo namještaj, madrace i tepihe, uklanjamo mrlje, mirise i nakupljenu prljavštinu uz pomoć profesionalnih strojeva i sredstava.<br />
+            Savršeno za sezonsko osvježenje ili pripremu prostora za najam.`
+    },
+    generalno: {
+      icon: "pictures/Housekeeping.png",
+      title: "Generalno čišćenje",
+      text: `Nakon renovacija i radova ostane puno prašine, ljepila i drugih tvrdokornih nečistoća.<br />
+            Mi ulazimo kada majstori izađu – i vraćamo prostoru red.<br />
+            Čistimo temeljito sve površine, prozore, podove i detalje, kako bi prostor bio spreman za useljenje ili korištenje.`
+    },
+    stubišta: {
+      icon: "pictures/Staircase.png",
+      title: "Održavanje stubišta i zajedničkih prostorija",
+      text: `Zajednički prostori govore puno o zgradi.<br />
+            Održavamo stubišta i zajedničke prostorije 2x ili 4x mjesečno, uz točan raspored i uredno vođenje evidencije.<br />
+            Pouzdani smo, diskretni i ne preskačemo ništa - od ulaza do zadnje stepenice.`
+    }
+  };
+
+  function setFeatured(key) {
+    const featured = document.getElementById("featured");
+    const data = services[key];
+
+    featured.classList.add("fade-out");
+
+    setTimeout(() => {
+      document.getElementById("featured-icon").src = data.icon;
+      document.getElementById("featured-title").innerHTML = `<strong>${data.title}</strong>`;
+      document.getElementById("featured-text").innerHTML = data.text;
+
+      featured.classList.remove("fade-out");
+      featured.classList.add("fade-in");
+
+      document.querySelectorAll(".service-card").forEach(c => c.classList.remove("active"));
+      document.querySelector(`.service-card[data-key="${key}"]`)?.classList.add("active");
+
+
+      // Remove fade-in class after animation completes
+      setTimeout(() => {
+        featured.classList.remove("fade-in");
+      }, 300);
+    }, 200);
+  }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".service-card");
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const key = card.getAttribute("data-key");
+      if (key) setFeatured(key);
+    });
+  });
+
+});
+
+</script>
+    
 </body>
 </html>
