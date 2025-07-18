@@ -18,7 +18,9 @@
             </a>
         </div>
 
-        <nav class="main-nav">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <nav class="main-nav" id="main-nav">
             <a href="index.html">Naslovnica</a>
             <a href="usluge.html">Usluge</a>
             <a href="kontakt.html">Kontakt</a>
@@ -189,20 +191,29 @@
     }, 200);
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".service-card");
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      const key = card.getAttribute("data-key");
-      if (key) setFeatured(key);
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".service-card");
+      cards.forEach(card => {
+        card.addEventListener("click", () => {
+          const key = card.getAttribute("data-key");
+          if (key) setFeatured(key);
+        });
+      });
+
     });
-  });
 
-});
+    setFeatured("stanovi")
 
-setFeatured("stanovi")
+
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
 
 </script>
     
 </body>
 </html>
+

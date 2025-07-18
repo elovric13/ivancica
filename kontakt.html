@@ -15,17 +15,18 @@
     <header>
         <div class="header-left">
             <a href="index.html">
-                <img src="logo_name.svg" alt="Ivančica logo" class="logo" />
+            <img src="logo_name.svg" alt="Ivančica logo" class="logo" />
             </a>
         </div>
 
-        <nav class="main-nav">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <nav class="main-nav" id="main-nav">
             <a href="index.html">Naslovnica</a>
             <a href="usluge.html">Usluge</a>
             <a href="kontakt.html">Kontakt</a>
         </nav>
-        
-    </header>
+        </header>
 
     <div class="background-decor">
         <div class="daisy daisy-l1"></div>
@@ -88,8 +89,16 @@
     </main>
 
     
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('main-nav');
 
-
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  });
+</script>
     
 </body>
 </html>

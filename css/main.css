@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+/* html, body {
+  overflow-x: hidden;
+} */
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +23,7 @@ body {
   height: 100%;
   z-index: -1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 /* Daisy flower decorations */
@@ -143,12 +148,24 @@ header {
   color: #17a3b6;
 }
 
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #000F3C;
+  padding: 20px 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 /* Naslovnica */
 
 .naslovnica-section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   padding: 30px 40px;
   flex-wrap: wrap;
   gap: 120px;
@@ -159,6 +176,7 @@ header {
   flex-shrink: 1;
   /* flex: 1; */
   margin-left: 75px;
+  justify-content: left;
 }
 
 .text-block h1 {
@@ -169,7 +187,7 @@ header {
 .subhead {
   font-size: 18px;
   color: #000F3C;
-  text-align: justify;
+  text-align: left;
 }
 
 .cta-button-naslovnica {
@@ -496,5 +514,92 @@ header {
   .kontakt-form {
     width: 100%;
     max-width: 350px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    padding: 0;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #000F3C;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background: #FFFEE9;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .main-nav a {
+    padding: 15px 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  .header-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .naslovnica-section {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .text-block {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .subhead {
+    text-align: center;
+  }
+
+  .cta-button-naslovnica {
+    margin: 0 auto;
+  }
+
+  .cleaning_lady img {
+    width: 100%;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
   }
 }

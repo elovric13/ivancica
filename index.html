@@ -18,11 +18,21 @@
             </a>
         </div>
 
-        <nav class="main-nav">
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+
+        <nav class="main-nav" id="main-nav">
             <a href="index.html">NASLOVNICA</a>
             <a href="usluge.html">Usluge</a>
             <a href="kontakt.html">Kontakt</a>
         </nav>
+
+        <!-- <nav class="main-nav">
+            <a href="index.html">NASLOVNICA</a>
+            <a href="usluge.html">Usluge</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav> -->
         
     </header>
 
@@ -67,3 +77,13 @@
 
 </body>
 </html>
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
