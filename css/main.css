@@ -357,7 +357,7 @@ header {
     align-items: center; 
     justify-content: center;
     text-align: center;
-    gap: 18xpx; 
+    gap: 18px; 
     margin-bottom: 20px;
 }
 
@@ -592,7 +592,7 @@ header {
   }
 
   .cleaning_lady img {
-    width: 100%;
+    width: 90%;
   }
 
   .circle {
