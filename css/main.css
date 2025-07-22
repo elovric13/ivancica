@@ -9,6 +9,7 @@ body {
   font-family: Montserrat;
   position: relative;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Background */
@@ -20,6 +21,8 @@ body {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
+  top: 0;
+  left: 0;
 }
 
 /* Daisy flower decorations */
@@ -217,7 +220,7 @@ header {
 }
 
 .cleaning_lady img {
-  width: 80%;
+  width: 70%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -230,8 +233,8 @@ header {
   top: 50%;
   transform: translate(-50%, -65%);
   background: #FFF4CA;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   z-index: -1;
   opacity: 75%;
 }
@@ -338,7 +341,7 @@ header {
   background: #fff;
   border-radius: 15px;
   padding: 20px;
-  height: 100px;
+  height: 120px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -350,8 +353,11 @@ header {
 
 .service-header {
     display: flex;
+    flex-direction: column;
     align-items: center; 
-    gap: 40px; 
+    justify-content: center;
+    text-align: center;
+    gap: 18xpx; 
     margin-bottom: 20px;
 }
 
@@ -359,11 +365,11 @@ header {
     width: 40px;
     flex-shrink: 0;
     /* padding-left: 25px; */
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .service-card h3 {
-    flex: 1;
+    /* flex: 1; */
     font-size: 18px;
     color: #353e5a;
     margin: 0;
