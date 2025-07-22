@@ -166,7 +166,7 @@ header {
 .naslovnica-section {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   padding: 30px 40px;
   flex-wrap: wrap;
   gap: 120px;
@@ -388,13 +388,11 @@ header {
   display: flex;
   justify-content: center;
   padding: 20px 40px;
-  gap: 100px;
+  gap: 160px;
   flex-wrap: wrap;
 }
 
 .kontakt-info {
-  position: relative;
-  left: -100px;
   min-width: 200px;
 }
 
@@ -617,7 +615,6 @@ header {
     align-items: flex-start;
     text-align: left;
     margin: 0 auto;
-    max-width: 300px;
     padding: 0 20px;
   }
 
@@ -641,6 +638,7 @@ header {
     max-width: 360px;
     padding: 20px;
     margin: 0 auto;
+    min-width: auto;
   }
 
   .bg-img-1,
